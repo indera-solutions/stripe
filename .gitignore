@@ -20,8 +20,6 @@ ios/public
 ios/Podfile.lock
 xcuserdata
 
-dist
-
 android/.idea
 android/.gradle
 android/local.properties
