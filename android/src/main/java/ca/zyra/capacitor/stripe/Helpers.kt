@@ -52,6 +52,7 @@ internal fun cardToJSON(card: Card): JSObject {
     cardJs.putOpt("funding", card.funding)
     cardJs.putOpt("last4", card.last4)
     cardJs.putOpt("name", card.name)
+    cardJs.putOpt("id", card.id)
     return cardJs
 }
 
