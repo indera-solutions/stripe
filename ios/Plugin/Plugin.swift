@@ -344,7 +344,7 @@ public class StripePlugin: CAPPlugin {
 
         let pm = STPPaymentHandler.shared
 
-        pm.confirmPayment(withParams: pip, authenticationContext: self) { (status, pi, err) in
+        pm().confirmPayment(withParams: pip, authenticationContext: self) { (status, pi, err) in
             switch status {
             case .failed:
                 if err != nil {
@@ -396,7 +396,7 @@ public class StripePlugin: CAPPlugin {
 
         let pm = STPPaymentHandler.shared
 
-        pm.confirmSetupIntent(pip, with: self) { (status, si, err) in
+        pm().confirmSetupIntent(pip, with: self) { (status, si, err) in
             switch status {
             case .failed:
                 if err != nil {
