@@ -103,6 +103,10 @@ internal fun paymentIntentToJSON(pi: PaymentIntent): JSObject {
     res.putOpt("description", pi.description)
     res.putOpt("id", pi.id)
     res.putOpt("lastPaymentError", pi.lastPaymentError)
+    if(pi.lastPaymentError != null) {
+        val messageErrorStr: String = pi.lastPaymentError!!.message as String
+        res.putOpt("errorMessage", messageErrorStr)
+    }
     res.putOpt("paymentMethodId", pi.paymentMethodId)
     res.putOpt("isLiveMode", pi.isLiveMode)
 
